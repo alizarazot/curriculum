@@ -1,0 +1,14 @@
+input {
+    border-radius: 2px;
+    border: 1px solid blue;
+}
+
+.tipoinputs {
+    border: 3px solid violet;
+    border-radius: 9px;
+}
+
+#nombrepersona {
+    font-size: large;
+    height: 35px;
+}
