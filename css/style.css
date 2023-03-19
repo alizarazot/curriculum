@@ -1,27 +1,84 @@
 /* ! Cascading Style Sheets. */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
 }
 
 html {
-    margin: 20%;
+  margin: 20%;
 }
 
 h1 {
-    font-size: 15rem;
-    text-align: center;
+  font-size: 10rem;
+  text-align: center;
 }
 
-img {
-    width: 80%; /* For any strange reazon, this avoids overflowing. */
-    padding: 10%;
+img,
+video {
+  width: 80%;
+  /* For any strange reazon, this avoids overflowing. */
+  padding: 10%;
+}
+
+iframe {
+  width: 80%;
+  height: 15rem;
+  margin: 10%;
 }
 
 p {
-    padding: 3%;
+  padding: 3%;
+}
+
+cite {
+  display: block;
+  font-size: 20pt;
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+cite::before,
+cite::after {
+  font-size: 30pt;
+  font-weight: 900;
+}
+
+cite::before {
+  content: "«";
+  vertical-align: super;
+}
+
+cite::after {
+  content: "»";
+  vertical-align: sub;
+}
+
+.cite-author {
+  display: block;
+  text-align: right;
+}
+
+.cite-author::before {
+  content: ">>> ";
+}
+
+td {
+  border: 0.5rem solid gray;
+  padding: 1rem;
+  text-align: center;
+}
+
+input:valid,
+textarea:valid {
+  background: blue;
+}
+
+input:invalid,
+textarea:invalid {
+  background: red;
 }

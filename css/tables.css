@@ -1,11 +1,9 @@
-
 img {
-    /* Configurar ancho y altura de la imagen. */
-    width: 200px; 
-    height: 200px;
+  /* Configurar ancho y altura de la imagen. */
+  width: 200px;
+  height: 200px;
 }
 
 tr:hover {
-    background-color: black;
+  background-color: black;
 }
-
