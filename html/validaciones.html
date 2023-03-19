@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta-etiquetas -->
+    <meta name="description" content="Esta página contiene código HTML que utiliza Validacionesde formularios.">
+    <meta name="keywords" content="HTML,html,página,web,page,formularios">
+    <meta name="author" content="Anderson Lizarazo Tellez">
+    <meta name="generator" content="VSCode">
+    <meta name="theme-color" content="#0000ff">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Validaciones</title>
+</head>
+
+<body>
+    <header>
+        <h1>Registro y Validación</h1>
+    </header>
+
+    <form action="" method="post">
+        <label for="">Edad (Mayores de 18 y Menores de 30)</label>
+        <input type="number" max="30" , min="18" required>
+
+        <br>
+
+        <label for="">Nombre (Mínimo 2 carácteres y Máximo 12 carácteres)</label>
+        <input type="text" minlength="2" maxlength="12" required>
+
+        <br>
+
+        <label for="">Calificación del servicio</label>
+        <input type="range" name="" id="" min="0" max="10" step="2" value="10" required>
+
+        <br>
+
+        <label for="">Contraseña (Debe ser extremadamente segura)</label>
+        <!-- Un ejemplo de contraseña: ande65-no@one. onetu -->
+        <input type="password" name="" id="" pattern="[a-zA-Z]*[0-9]*(-|,)*[a-z]*@[a-z]*\. [a-z]*" minlength="8"
+            required>
+
+        <p> La contraseña debe llevar en el siguiente orden:</p>
+        <ol>
+            <li>Letras en minúsculas o mayúsculas</li>
+            <li>Números</li>
+            <li>Un signo de: <strong>-</strong> o <strong>,</strong></li>
+            <li>Letras minúsculas</li>
+            <li>Signo arroba <strong>@</strong></li>
+            <li>Letras minúsculas</li>
+            <li>Un punto <strong>.</strong></li>
+            <li>Un espacio</li>
+            <li>Letras minúsculas</li>
+        </ol>
+        <p>Algunas cosas de ahí son opcionales, pero, por motivos de seguridad no te diré que, solo prueba hasta que
+            funcione.</p>
+
+        <button>Enviar</button>
+    </form>
+</body>
+
+</html>
