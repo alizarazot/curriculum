@@ -128,6 +128,32 @@ nav {
   box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
 }
 
+/* Skills. */
+.section-skills {
+  padding: 80px;
+}
+
+.section-skills .languages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.section-skills h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+}
+
+.languages i {
+  font-size: 100px;
+  transition: all ease .5s;
+}
+
+.languages i:hover {
+  transform: scale(1.2);
+}
+
 /* Education. */
 .section-education {
   background-color: #c2c2c2;
@@ -303,6 +329,10 @@ footer {
   border-radius: 5px;
   border-color: #d03d3d;
   transition: all ease-in-out 0.6s;
+}
+
+.social-media a {
+  text-decoration: none;
 }
 
 .social-media > a > i {
