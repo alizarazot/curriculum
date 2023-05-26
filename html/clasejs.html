@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clasejs</title>
+</head>
+
+<body>
+    hola bienvenido
+
+    <input type="text" id="valor">
+    <button id="btn_enviar" onclick="calcular();">Botón</button>
+
+    <h1 id="titulo"></h1>
+    <script>
+        //variables
+        const nameuno = "cualquier cosa";
+        var namedos = "cualquier cosa";
+        let nametres = "cualquier cosa";
+        //tipos de datos
+        let num_a = 5;
+        let num_b = 10.2;
+        let boolean = false;
+        let stringvar = "hola soy un string"
+        let arraynum = [1, 2, 3, 4, 5, "6", "7", "8"]
+        let dias_semana = ["lunes", "martes", "miércoles", "jueves", "viernes"]
+        let users = [
+            { name: "wilder", last_name: "Duarte", age: 31 },
+            { name: "wilder", last_name: "Duarte", age: 31 },
+            { name: "wilder", last_name: "Duarte", age: 31 }
+        ]
+        //operadores matematicos + - * / % ^
+        let suma = num_a + num_b
+        let resta = num_b - num_a
+        let multi = num_a * num_b
+        let divi = num_b / num_a
+        let module = num_a % num_b
+        let expo = num_a ^ num_b
+        resta = Math.round(resta);
+        console.log("suma: " + suma + "\nresta: " + resta + "\nmultiplicacion: " + multi + "\ndivision: " + divi);
+
+        let concatenar = "Suma: ".concat(suma);
+        console.log(concatenar);
+
+        // Operadores de Comparación.
+        // Operadores Lógicos.
+        // Estructuras Condicionales: IF / ELSE / ELSEIF.
+        let cantarray = arraynum.length;
+
+        if (cantarray > 7) {
+            console.log(cantarray);
+            console.log(arraynum[7]);
+            console.log(dias_semana[2]);
+        }
+
+        for (let i of dias_semana) {
+            console.log("Día:", i);
+        }
+
+        for (let i = 0; i < dias_semana.length; i++) {
+            console.log("Día: ", dias_semana[i]);
+        }
+
+        let i = 0;
+        while (i < users.length) {
+            console.log(users[i].name);
+            i++;
+        }
+
+        console.log(users[0].name);
+
+
+
+
+        function calcular() {
+            let nameVar = document.getElementById("valor").value;
+            nameVar = nameVar.toUpperCase();
+            document.getElementById("titulo").innerText = nameVar;
+
+        }
+
+        document.getElementById("btn_enviar").addEventListener("mouseover", e => {
+            calcular();
+            title = document.getElementById("titulo");
+
+            title.style.color = "red";
+            title.style.backgroundColor = "aqua";
+        });
+    </script>
+</body>
+
+</html>
