@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The JavaScript Form</title>
+</head>
+
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+
+        font-family: sans-serif;
+        font-size: 18px;
+    }
+
+    html,
+    body,
+    form {
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        display: grid;
+        place-items: center;
+
+    }
+
+    h1, button {
+        column-count: 2;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+
+    button {
+        font-size: 18px;
+        font-weight: normal;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <form id="form" action="">
+        <h1>Registro</h1>
+        <div class="grupo">
+            <label for="">Name:</label>
+            <input id="name" type="text">
+        </div>
+
+        <div class="grupo">
+            <label for="">Password:</label>
+            <input id="password" type="password">
+        </div>
+
+        <div class="grupo">
+            <label for="">Email:</label>
+            <input id="email" type="email">
+        </div>
+
+        <button type="submit">Enviar</button>
+        <p id="espacioinfo"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const password = document.getElementById("password");
+        const email = document.getElementById("email");
+        const espacioinfo = document.getElementById("espacioinfo");
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            let info = "";
+            let validar = false;
+
+            if (name.value.length < 3) {
+                info += "Nombre demasiado corto.\n";
+                validar = true;
+            }
+
+            if (password.value.length < 8) {
+                info += "Contraseña demasiado corta.\n";
+                validar = true;
+            }
+
+            if (!emailRegex.test(email.value)) {
+                info += "No es un email.\n";
+                validar = true;
+            }
+
+
+            if (validar) {
+                espacioinfo.innerText = info;
+                espacioinfo.style.color = "red";
+            } else {
+                espacioinfo.innerText = "Enviado con éxito."
+                espacioinfo.style.color = "green"
+            }
+        });
+    </script>
+</body>
+
+</html>
