@@ -393,6 +393,7 @@ footer {
 
   .nav .hamburgueropen {
     clip-path: circle(150% at 0 0);
+    will-change: clip-path;
   }
 
   .nav .enlaces-header a {
